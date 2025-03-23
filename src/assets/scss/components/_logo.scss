@@ -1,0 +1,5 @@
+@use '../abstracts/mixins' as mixins;
+
+.logo {
+  @include mixins.focus-outline;
+}

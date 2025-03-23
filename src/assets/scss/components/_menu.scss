@@ -1,0 +1,26 @@
+@use '../abstracts/mixins' as mixins;
+
+.menu {
+  &__list--row {
+    display: inline-flex;
+    column-gap: 40px;
+    align-items: center;
+    color: var(--foreground-secondary);
+  }
+
+  &__list--column > &__item:not(:last-child) {
+    margin-bottom: 20px;
+    color: var(--foreground-primary);
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+    font-size: var(--font-size-menu);
+    color: currentColor;
+
+    @include mixins.focus-outline;
+  }
+}

@@ -10,9 +10,15 @@
 @use './base/typography';
 
 /* Components */
+@use './components/logo';
+@use './components/menu';
+@use './components/burger-button';
+@use './components/close-button';
+@use './components/mobile-overlay';
 
 /* Layout */
 @use './layout/container';
+@use './layout/header';
 
 /* Pages */
 

@@ -1,0 +1,27 @@
+@use '../abstracts/mixins' as mixins;
+
+.burger-button {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--color-white);
+
+  @include mixins.flex-center(true);
+  @include mixins.transition(background-color);
+  @include mixins.focus-outline;
+
+  @include mixins.hover {
+    background-color: var(--color-accent-1);
+  }
+
+  &:after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: currentColor;
+    box-shadow:
+      0 -5px,
+      0 5px;
+  }
+}
