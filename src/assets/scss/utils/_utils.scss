@@ -1,0 +1,40 @@
+@use '../abstracts/media' as media;
+@use '../abstracts/mixins' as mixins;
+
+.visually-hidden {
+  @include mixins.visually-hidden;
+}
+
+.hidden-tablet {
+  @include media.tablet {
+    display: none;
+  }
+}
+
+.visible-tablet {
+  @include media.tablet-above {
+    display: none;
+  }
+}
+
+.underline-effect {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentcolor;
+
+    @include mixins.transition(width);
+  }
+
+  @include mixins.hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}

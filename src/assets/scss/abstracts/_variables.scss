@@ -1,0 +1,75 @@
+:root {
+  /* Common Colors */
+  --color-dark: #210b36;
+  --color-white: #fff;
+  --color-accent-1: #dfd4eb;
+  --color-accent-2: #eee2fa;
+  --color-accent-3: #c6b6d7;
+  --color-accent-4: #b865d6;
+  --color-accent-5: #6e479e;
+  --color-accent-6: #5f536c;
+
+  /* Container */
+  --container-width: 1180px;
+  --container-padding-x: 20px;
+
+  /* Gradient */
+  --linear-gradient: linear-gradient(
+    47deg,
+    #2e00b1 0%,
+    #8100bd 48.44%,
+    #a400be 100%
+  );
+
+  /* Backgrounds */
+  --background-primary: var(--color-white);
+  --background-secondary: var(--color-accent-2);
+  --background-accent: var(--linear-gradient);
+
+  /* Foregrounds */
+  --foreground-primary: var(--color-dark);
+  --foreground-secondary: var(--color-white);
+  --foreground-tertiary: var(--color-accent-6);
+
+  /* Fonts */
+  --font-primary: 'Nunito', sans-serif;
+  --font-secondary: 'Comfortaa', sans-serif;
+  --font-size-large: 40px;
+  --font-size-medium: 30px;
+  --font-size-base: 18px;
+  --font-size-small: 15px;
+
+  /* Borders */
+  --border-radius: 10px;
+
+  /* Button */
+  --button-background-primary: var(--linear-gradient);
+  --button-background-hover: var(--linear-gradient), rgb(0 0 0 / 10%);
+  --button-background-focus: var(--linear-gradient), rgb(255 255 255 / 20%);
+
+  /* Tabs */
+  --tabs-active: var(--color-accent-5);
+  --tabs-inactive: var(--color-accent-3);
+
+  /* Input */
+  --input-border-primary: var(--color-accent-3);
+  --input-border-hover: var(--color-accent-4);
+  --input-border-focus: var(--color-accent-5);
+
+  /* Slider */
+  --slider-button-color-primary: var(--color-accent-5);
+  --slider-button-background-hover: var(--color-accent-1);
+
+  /* Social */
+  --social-icon-color-primary: var(--color-accent-5);
+  --social-icon-color-hover: var(--color-accent-4);
+  --social-icon-background-primary: var(--color-white);
+
+  /* Close button */
+  --close-button-color-primary: var(--color-dark);
+  --close-button-background-hover: var(--color-accent-1);
+
+  /* Outline */
+  --outline: 2px solid var(--color-accent-5);
+  --outline-offset: 2px;
+}
