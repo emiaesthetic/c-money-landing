@@ -1,0 +1,30 @@
+@use '../abstracts/media' as media;
+@use '../abstracts/mixins' as mixins;
+
+.button {
+  position: relative;
+  padding: 24.5px 99.5px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: var(--font-size-btn);
+  background-color: transparent;
+  background-image: var(--linear-gradient);
+  background-blend-mode: overlay;
+  color: var(--foreground-secondary);
+
+  @include mixins.flex-center(true);
+  @include mixins.transition(background-color);
+
+  @include mixins.hover {
+    background-color: var(--button-background-hover);
+  }
+
+  @include mixins.focus {
+    background-color: var(--button-background-focus);
+  }
+
+  @include media.mobile {
+    padding: 16px 65px;
+  }
+}

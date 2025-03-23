@@ -276,6 +276,7 @@ export default {
         'background-origin',
         'background-size',
         'background-repeat',
+        'background-blend-mode',
         'color',
         'box-decoration-break',
         'box-shadow',

@@ -5,7 +5,7 @@
     display: inline-flex;
     column-gap: 40px;
     align-items: center;
-    color: var(--foreground-secondary);
+    color: var(--foreground-primary);
   }
 
   &__list--column > &__item:not(:last-child) {

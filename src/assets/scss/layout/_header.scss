@@ -1,5 +1,19 @@
+@use '../abstracts/media' as media;
+
 .header {
-  padding-top: 20px;
+  padding-block: 20px;
+
+  @include media.laptop {
+    padding-bottom: 27px;
+  }
+
+  @include media.tablet {
+    padding-bottom: 18px;
+  }
+
+  @include media.tablet {
+    padding-bottom: 15px;
+  }
 
   &__container {
     display: flex;

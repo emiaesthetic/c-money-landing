@@ -10,6 +10,7 @@
 @use './base/typography';
 
 /* Components */
+@use './components/button';
 @use './components/logo';
 @use './components/menu';
 @use './components/burger-button';
@@ -19,6 +20,7 @@
 /* Layout */
 @use './layout/container';
 @use './layout/header';
+@use './layout/hero';
 
 /* Pages */
 

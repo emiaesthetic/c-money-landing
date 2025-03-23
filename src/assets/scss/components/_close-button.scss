@@ -2,24 +2,25 @@
 
 .close-button {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   color: var(--color-dark);
 
   @include mixins.flex-center(true);
   @include mixins.transition(background-color);
-  @include mixins.focus-outline;
 
   @include mixins.hover {
     background-color: var(--color-accent-1);
   }
 
+  @include mixins.focus-outline;
+
   &:before,
   &:after {
     content: '';
     position: absolute;
-    width: 50%;
+    width: 14px;
     height: 2px;
     background-color: currentColor;
   }

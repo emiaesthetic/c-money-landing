@@ -39,6 +39,7 @@
   --font-size-large: 40px;
   --font-size-medium: 30px;
   --font-size-base: 18px;
+  --font-size-btn: 18px;
   --font-size-small: 15px;
   --font-size-menu: 15px;
 
@@ -46,9 +47,8 @@
   --border-radius: 10px;
 
   /* Button */
-  --button-background-primary: var(--linear-gradient);
-  --button-background-hover: var(--linear-gradient), rgb(0 0 0 / 10%);
-  --button-background-focus: var(--linear-gradient), rgb(255 255 255 / 20%);
+  --button-background-hover: rgb(0 0 0 / 10%);
+  --button-background-focus: rgb(255 255 255 / 20%);
 
   /* Tabs */
   --tabs-active: var(--color-accent-5);
@@ -76,8 +76,20 @@
   --outline: 2px solid var(--color-accent-5);
   --outline-offset: 2px;
 
+  @include media.laptop {
+    --font-size-medium: clamp(24px, 2.3438vw, 30px);
+  }
+
   @include media.tablet {
+    /* Container */
     --container-width: 580px;
     --container-padding-x: 15px;
+
+    /* Fonts */
+    --font-size-large: clamp(19px, 0.25rem + 4.6875vw, 40px);
+    --font-size-medium: clamp(17px, 0.75rem + 1.5625vw, 24px);
+    --font-size-base: clamp(14px, 0.6964rem + 0.8929vw, 18px);
+    --font-size-btn: clamp(16px, 0.9107rem + 0.4464vw, 18px);
+    --font-size-small: clamp(12px, 0.6161rem + 0.6696vw, 15px);
   }
 }
