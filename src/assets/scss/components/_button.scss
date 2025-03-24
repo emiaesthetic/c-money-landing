@@ -24,7 +24,7 @@
     background-color: var(--button-background-focus);
   }
 
-  @include media.mobile {
+  @include media.mobile-lg {
     padding: 16px 65px;
   }
 }

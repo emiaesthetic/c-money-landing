@@ -1,0 +1,74 @@
+@use '../abstracts/media' as media;
+
+.card {
+  --offset: 40px;
+
+  position: relative;
+  padding-bottom: 15px;
+  padding-left: var(--offset);
+
+  @include media.mobile-lg {
+    padding-bottom: 10px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - var(--offset));
+    height: 4px;
+    background-image: var(--linear-gradient);
+
+    @include media.mobile-lg {
+      height: 2px;
+    }
+  }
+
+  &--status:before {
+    background-image: url('@/assets/icons/equalizer.svg');
+  }
+
+  &--reliability:before {
+    background-image: url('@/assets/icons/lock.svg');
+  }
+
+  &--exchange:before {
+    background-image: url('@/assets/icons/auto-renew.svg');
+  }
+
+  &--convenience:before {
+    background-image: url('@/assets/icons/check-circle.svg');
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: var(--font-size-medium);
+    line-height: 1.2;
+
+    @include media.mobile {
+      margin-bottom: unset;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: var(--font-size-base);
+    line-height: 1.3;
+  }
+}

@@ -1,0 +1,69 @@
+@use '../abstracts/media' as media;
+@use '../abstracts/mixins' as mixins;
+
+.benefits {
+  --cart-count: 4;
+  --row-gap: 48px;
+  --column-gap: clamp(12px, -8.75rem + 14.8438vw, 50px);
+
+  padding-block: 45px 90px;
+
+  @include media.laptop-less {
+    --cart-count: 2;
+    --column-gap: 66px;
+  }
+
+  @include media.tablet {
+    --cart-count: 2;
+    --column-gap: 66px;
+
+    padding-block: 40px 80px;
+  }
+
+  @include media.mobile-lg {
+    --cart-count: 1;
+    --row-gap: 20px;
+
+    padding-block: 40px 80px;
+  }
+
+  @include media.mobile {
+    padding-block: 30px 60px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include media.tablet {
+      max-width: 380px;
+      margin-bottom: 40px;
+    }
+
+    @include media.mobile-lg {
+      max-width: 260px;
+    }
+
+    @include media.mobile {
+      max-width: 240px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--row-gap) var(--column-gap);
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__item {
+    flex-basis: calc(
+      (100% - var(--column-gap) * (var(--cart-count) - 1)) / var(--cart-count)
+    );
+
+    @include media.mobile {
+      max-width: 261px;
+    }
+  }
+}

@@ -16,11 +16,13 @@
 @use './components/burger-button';
 @use './components/close-button';
 @use './components/mobile-overlay';
+@use './components/card';
 
 /* Layout */
 @use './layout/container';
 @use './layout/header';
 @use './layout/hero';
+@use './layout/benefits';
 
 /* Pages */
 

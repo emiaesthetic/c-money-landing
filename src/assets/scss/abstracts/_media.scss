@@ -1,9 +1,21 @@
-$desktop-above: 1280px;
-$desktop: 1279px;
-$laptop-above: 1024px;
-$laptop: 1023px;
-$tablet-above: 768px;
-$tablet: 767px;
+/* Desktop */
+$desktop-above: 1281px;
+$desktop: 1280px;
+
+/* Laptop */
+$laptop-above: 1025px;
+$laptop: 1024px;
+$laptop-less: 1023px;
+
+/* Tablet */
+$tablet-above: 769px;
+$tablet: 768px;
+
+/* Mobile Large */
+$mobile-lg-above: 577px;
+$mobile-lg: 576px;
+
+/* Mobile */
 $mobile-above: 321px;
 $mobile: 320px;
 
@@ -31,6 +43,12 @@ $mobile: 320px;
   }
 }
 
+@mixin laptop-less {
+  @media (max-width: $laptop-less) {
+    @content;
+  }
+}
+
 @mixin tablet-above {
   @media (min-width: $tablet-above) {
     @content;
@@ -39,6 +57,18 @@ $mobile: 320px;
 
 @mixin tablet {
   @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile-lg-above {
+  @media (min-width: $mobile-lg-above) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media (max-width: $mobile-lg) {
     @content;
   }
 }
