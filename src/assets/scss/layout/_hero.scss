@@ -16,19 +16,47 @@
   }
 
   &__container {
-    height: 100%;
+    --view-width: 1280;
+    --image-height: 494;
+    --height: min(
+      calc(100vw / (var(--view-width) / var(--image-height))),
+      calc(var(--image-height) * (1px))
+    );
+
     min-height: 506px;
+    background-image: url('@/assets/img/decor.svg');
+    background-position: top right 100px;
+    background-size: auto var(--height);
+    background-repeat: no-repeat;
 
     @include media.laptop {
       min-height: 408px;
+      background-position: top right 35px;
+    }
+
+    @include media.laptop-less {
+      background-position: top right;
     }
 
     @include media.tablet {
-      min-height: 678px;
+      --view-width: 768;
+      --hero-height: 494;
+
+      min-height: calc(100vw / (var(--view-width) / var(--hero-height)));
+      background-position: top center;
+      background-size: auto 408px;
+    }
+
+    @include media.mobile-lg {
+      --view-width: 576;
+      --image-height: 390;
+
+      background-size: auto var(--height);
     }
 
     @include media.mobile {
       min-height: 447px;
+      background-size: auto 260px;
     }
   }
 
@@ -43,8 +71,12 @@
 
     @include media.tablet {
       margin-inline: auto;
-      padding-top: 450px;
+      padding-top: 77.5%;
       text-align: center;
+    }
+
+    @include media.mobile-lg {
+      padding-top: 85%;
     }
 
     @include media.mobile {
