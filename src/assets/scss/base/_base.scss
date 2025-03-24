@@ -1,3 +1,5 @@
+@use '../abstracts/media' as media;
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -10,10 +12,27 @@ html {
 }
 
 body {
+  --view-width: 1280;
+  --bg-image-height: 566;
+  --bg-aspect-ratio: calc(var(--bg-image-height) / var(--view-width));
+
   overflow-x: hidden;
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--background-primary);
+  background-image: url('@/assets/img/background.svg');
+  background-position: top right;
+  background-size: auto calc(100vw * var(--bg-aspect-ratio));
+  background-repeat: no-repeat;
+
+  @include media.desktop-above {
+    --view-width: 3400;
+    --bg-image-height: 1100;
+  }
+
+  @include media.mobile-lg {
+    background-position: top right -50px;
+  }
 }
 
 ul,
