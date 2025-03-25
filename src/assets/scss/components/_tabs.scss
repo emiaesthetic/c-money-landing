@@ -1,0 +1,59 @@
+@use '../abstracts/media' as media;
+@use '../abstracts/mixins' as mixins;
+
+.tabs {
+  &__button-list {
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 42px;
+
+    @include media.tablet {
+      margin-bottom: 40px;
+    }
+
+    @include media.mobile-lg {
+      column-gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    @include media.mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--tabs-primary);
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: var(--font-size-tabs);
+    text-align: center;
+    background-color: var(--background-primary);
+    color: var(--tabs-primary);
+
+    @include mixins.transition(color, border-color);
+
+    @include mixins.hover {
+      border-color: var(--tabs-hover);
+      color: var(--tabs-hover);
+    }
+
+    @include mixins.focus {
+      border-color: var(--tabs-focus);
+      color: var(--tabs-focus);
+    }
+
+    @include media.mobile-lg {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  &__button--is-active {
+    border-color: var(--tabs-focus);
+    color: var(--tabs-focus);
+  }
+}

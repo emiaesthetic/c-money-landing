@@ -1,0 +1,107 @@
+@use '../abstracts/media' as media;
+@use '../abstracts/mixins' as mixins;
+
+.form {
+  &__content {
+    display: none;
+    grid-template-areas:
+      'name surname patronymic'
+      '. . button';
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    @include media.laptop {
+      column-gap: 17px;
+    }
+
+    @include media.laptop-less {
+      grid-template-areas: unset;
+      grid-template-rows: repeat(4, auto);
+      grid-template-columns: 580px;
+      row-gap: 20px;
+      justify-content: center;
+    }
+
+    @include media.tablet {
+      grid-template-columns: 1fr;
+      row-gap: 10px;
+    }
+
+    @include media.mobile {
+      padding-right: 10px;
+    }
+
+    & > :last-child {
+      @include media.laptop-less {
+        margin-top: 30px;
+      }
+
+      @include media.mobile-lg {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__content--two-fields {
+    grid-template-areas: unset;
+    grid-template-rows: repeat(1, auto);
+
+    & > .button {
+      grid-area: unset;
+      align-self: end;
+    }
+  }
+
+  &__content--is-active {
+    display: grid;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 2px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: var(--font-size-small);
+    color: var(--label-border-primary);
+
+    @include media.tablet {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding-inline: 20px;
+    border: 2px solid var(--input-border-primary);
+    border-radius: var(--border-radius);
+
+    @include mixins.transition(border-color);
+
+    @include mixins.hover {
+      border-color: var(--input-border-hover);
+    }
+
+    @include mixins.focus {
+      border-color: var(--input-border-focus);
+    }
+
+    @include media.mobile-lg {
+      height: 50px;
+    }
+  }
+
+  &__button {
+    grid-area: button;
+    font-weight: 400;
+
+    @include media.laptop-less {
+      grid-area: unset;
+    }
+  }
+}

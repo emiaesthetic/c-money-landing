@@ -70,7 +70,7 @@
         </div>
       </section>
 
-      <section class="benefits">
+      <section class="benefits" id="about-us">
         <div class="container">
           <h2 class="benefits__title title">Почему с&nbsp;нами выгодно?</h2>
           <ul class="benefits__list">
@@ -99,6 +99,121 @@
               </p>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="check-in" id="check-in">
+        <div class="container">
+          <h2 class="check-in__title title">
+            Как зарегистрироваться на&nbsp;платформе
+          </h2>
+
+          <p class="check-in__hint">Пошагово заполните все поля формы</p>
+
+          <div class="check-in__tabs tabs">
+            <ul class="tabs__button-list">
+              <li class="tabs__button-item">
+                <button
+                  class="tabs__button tabs__button--is-active"
+                  type="button"
+                  aria-label="Вкладка один формы регистрации"
+                  data-tabs-path="first"
+                >
+                  1
+                </button>
+              </li>
+              <li class="tabs__button-item">
+                <button
+                  class="tabs__button"
+                  type="button"
+                  aria-label="Вкладка два формы регистрации"
+                  data-tabs-path="second"
+                >
+                  2
+                </button>
+              </li>
+              <li class="tabs__button-item">
+                <button
+                  class="tabs__button"
+                  type="button"
+                  aria-label="Вкладка три формы регистрации"
+                  data-tabs-path="third"
+                >
+                  3
+                </button>
+              </li>
+            </ul>
+
+            <form class="tabs__content form">
+              <fieldset
+                class="form__content form__content--is-active"
+                data-tabs-target="first"
+              >
+                <div class="form__field">
+                  <label class="form__label" for="name">Имя</label>
+                  <input class="form__input" type="text" id="name" />
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="surname">Фамилия</label>
+                  <input class="form__input" type="text" id="surname" />
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="patronymic">Отчество</label>
+                  <input class="form__input" type="text" id="patronymic" />
+                </div>
+
+                <button class="form__button button" type="button">Далее</button>
+              </fieldset>
+
+              <fieldset
+                class="form__content form__content--two-fields"
+                data-tabs-target="second"
+              >
+                <div class="form__field">
+                  <label class="form__label" for="phone">Телефон</label>
+                  <input class="form__input" type="tel" id="phone" />
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="email"
+                    >Электронная почта</label
+                  >
+                  <input class="form__input" type="text" id="email" />
+                </div>
+
+                <button class="form__button button" type="button">Далее</button>
+              </fieldset>
+
+              <fieldset class="form__content" data-tabs-target="third">
+                <div class="form__field">
+                  <label class="form__label" for="username"
+                    >Придумайте логин</label
+                  >
+                  <input class="form__input" type="text" id="username" />
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="password"
+                    >Придумайте пароль</label
+                  >
+                  <input class="form__input" type="password" id="password" />
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="password2"
+                    >Повторите пароль</label
+                  >
+                  <input class="form__input" type="password" id="password2" />
+                </div>
+
+                <button class="form__button button" type="submit">
+                  Зарегистрироваться
+                </button>
+              </fieldset>
+            </form>
+          </div>
         </div>
       </section>
     </main>

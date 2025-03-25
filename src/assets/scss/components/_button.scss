@@ -13,15 +13,30 @@
   background-blend-mode: overlay;
   color: var(--foreground-secondary);
 
+  &:disabled {
+    background-color: var(--button-background-disabled);
+    background-image: unset;
+  }
+
   @include mixins.flex-center(true);
   @include mixins.transition(background-color);
 
   @include mixins.hover {
     background-color: var(--button-background-hover);
+
+    &:disabled {
+      background-color: var(--button-background-disabled);
+      background-image: unset;
+    }
   }
 
   @include mixins.focus {
     background-color: var(--button-background-focus);
+
+    &:disabled {
+      background-color: var(--button-background-disabled);
+      background-image: unset;
+    }
   }
 
   @include media.mobile-lg {

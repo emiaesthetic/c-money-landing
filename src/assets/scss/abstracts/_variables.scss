@@ -4,6 +4,7 @@
   /* Common Colors */
   --color-dark: #210b36;
   --color-white: #fff;
+  --color-gray: #b0b0b0;
   --color-accent-1: #dfd4eb;
   --color-accent-2: #eee2fa;
   --color-accent-3: #c6b6d7;
@@ -38,6 +39,7 @@
   --font-secondary: 'Comfortaa', sans-serif;
   --font-size-large: 40px;
   --font-size-medium: 30px;
+  --font-size-tabs: 30px;
   --font-size-base: 18px;
   --font-size-btn: 18px;
   --font-size-small: 15px;
@@ -49,15 +51,18 @@
   /* Button */
   --button-background-hover: rgb(0 0 0 / 10%);
   --button-background-focus: rgb(255 255 255 / 20%);
+  --button-background-disabled: var(--color-gray);
 
   /* Tabs */
-  --tabs-active: var(--color-accent-5);
-  --tabs-inactive: var(--color-accent-3);
+  --tabs-primary: var(--color-accent-3);
+  --tabs-hover: var(--color-accent-4);
+  --tabs-focus: var(--color-accent-5);
 
   /* Input */
   --input-border-primary: var(--color-accent-3);
   --input-border-hover: var(--color-accent-4);
   --input-border-focus: var(--color-accent-5);
+  --label-border-primary: var(--color-accent-6);
 
   /* Slider */
   --slider-button-color-primary: var(--color-accent-5);
@@ -73,7 +78,7 @@
   --close-button-background-hover: var(--color-accent-1);
 
   /* Outline */
-  --outline: 2px solid var(--color-accent-5);
+  --outline: 2px solid currentColor;
   --outline-offset: 2px;
 
   @include media.laptop {
@@ -91,5 +96,9 @@
     --font-size-base: clamp(14px, 0.6964rem + 0.8929vw, 18px);
     --font-size-btn: clamp(16px, 0.9107rem + 0.4464vw, 18px);
     --font-size-small: clamp(12px, 0.6161rem + 0.6696vw, 15px);
+  }
+
+  @include media.mobile-lg {
+    --font-size-tabs: 18px;
   }
 }

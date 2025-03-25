@@ -23,8 +23,6 @@
   @include media.mobile-lg {
     --cart-count: 1;
     --row-gap: 20px;
-
-    padding-block: 40px 80px;
   }
 
   @include media.mobile {

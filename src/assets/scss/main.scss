@@ -17,12 +17,15 @@
 @use './components/close-button';
 @use './components/mobile-overlay';
 @use './components/card';
+@use './components/tabs';
+@use './components/form';
 
 /* Layout */
 @use './layout/container';
 @use './layout/header';
 @use './layout/hero';
 @use './layout/benefits';
+@use './layout/check-in';
 
 /* Pages */
 
