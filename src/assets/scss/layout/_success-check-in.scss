@@ -1,0 +1,78 @@
+@use '../abstracts/media' as media;
+@use '../abstracts/mixins' as mixins;
+
+.success-check-in {
+  padding-block: 70px 96px;
+  background-color: var(--background-secondary);
+
+  @include media.tablet {
+    padding-block: 60px 70px;
+  }
+
+  @include media.mobile {
+    padding-block: 40px 50px;
+  }
+
+  &__title {
+    max-width: 780px;
+    margin-bottom: 74px;
+
+    @include media.tablet {
+      max-width: unset;
+      margin-bottom: 60px;
+    }
+
+    @include media.mobile-lg {
+      margin-bottom: 50px;
+    }
+
+    @include media.mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    padding-inline: 15px;
+    padding-block: 50px;
+    border-radius: var(--border-radius);
+    background-color: var(--background-primary);
+
+    @include mixins.flex-center;
+
+    @include media.mobile {
+      padding-block: 66px 86px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  & svg {
+    margin-inline: auto;
+    margin-bottom: 23px;
+    color: var(--color-green);
+
+    @include media.mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 23px;
+    font-weight: 600;
+    font-size: var(--font-size-medium);
+    line-height: 1.2;
+
+    @include media.mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content-hint {
+    font-weight: 400;
+    font-size: var(--font-size-base);
+    line-height: 1.3;
+  }
+}

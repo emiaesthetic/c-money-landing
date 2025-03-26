@@ -13,7 +13,7 @@
 
     <title>C-Money</title>
 
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -102,7 +102,7 @@
         </div>
       </section>
 
-      <section class="check-in" id="check-in">
+      <section class="check-in success-check-in" id="check-in">
         <div class="container">
           <h2 class="check-in__title title">
             Как зарегистрироваться на&nbsp;платформе
@@ -117,7 +117,7 @@
                   class="tabs__button tabs__button--is-active"
                   type="button"
                   aria-label="Вкладка один формы регистрации"
-                  data-tabs-path="first"
+                  data-tabs-path="1"
                 >
                   1
                 </button>
@@ -127,7 +127,7 @@
                   class="tabs__button"
                   type="button"
                   aria-label="Вкладка два формы регистрации"
-                  data-tabs-path="second"
+                  data-tabs-path="2"
                 >
                   2
                 </button>
@@ -137,7 +137,7 @@
                   class="tabs__button"
                   type="button"
                   aria-label="Вкладка три формы регистрации"
-                  data-tabs-path="third"
+                  data-tabs-path="3"
                 >
                   3
                 </button>
@@ -147,21 +147,36 @@
             <form class="tabs__content form">
               <fieldset
                 class="form__content form__content--is-active"
-                data-tabs-target="first"
+                data-tabs-target="1"
               >
                 <div class="form__field">
                   <label class="form__label" for="name">Имя</label>
-                  <input class="form__input" type="text" id="name" />
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="name"
+                    id="name"
+                  />
                 </div>
 
                 <div class="form__field">
                   <label class="form__label" for="surname">Фамилия</label>
-                  <input class="form__input" type="text" id="surname" />
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="surname"
+                    id="surname"
+                  />
                 </div>
 
                 <div class="form__field">
                   <label class="form__label" for="patronymic">Отчество</label>
-                  <input class="form__input" type="text" id="patronymic" />
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="patronymic"
+                    id="patronymic"
+                  />
                 </div>
 
                 <button class="form__button button" type="button">Далее</button>
@@ -169,43 +184,68 @@
 
               <fieldset
                 class="form__content form__content--two-fields"
-                data-tabs-target="second"
+                data-tabs-target="2"
               >
                 <div class="form__field">
                   <label class="form__label" for="phone">Телефон</label>
-                  <input class="form__input" type="tel" id="phone" />
+                  <input
+                    class="form__input"
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                  />
                 </div>
 
                 <div class="form__field">
-                  <label class="form__label" for="email"
-                    >Электронная почта</label
-                  >
-                  <input class="form__input" type="text" id="email" />
+                  <label class="form__label" for="email">
+                    Электронная почта
+                  </label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="email"
+                    id="email"
+                  />
                 </div>
 
                 <button class="form__button button" type="button">Далее</button>
               </fieldset>
 
-              <fieldset class="form__content" data-tabs-target="third">
+              <fieldset class="form__content" data-tabs-target="3">
                 <div class="form__field">
-                  <label class="form__label" for="username"
-                    >Придумайте логин</label
-                  >
-                  <input class="form__input" type="text" id="username" />
+                  <label class="form__label" for="username">
+                    Придумайте логин
+                  </label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="username"
+                    id="username"
+                  />
                 </div>
 
                 <div class="form__field">
-                  <label class="form__label" for="password"
-                    >Придумайте пароль</label
-                  >
-                  <input class="form__input" type="password" id="password" />
+                  <label class="form__label" for="password">
+                    Придумайте пароль
+                  </label>
+                  <input
+                    class="form__input"
+                    type="password"
+                    name="password"
+                    id="password"
+                  />
                 </div>
 
                 <div class="form__field">
-                  <label class="form__label" for="password2"
-                    >Повторите пароль</label
-                  >
-                  <input class="form__input" type="password" id="password2" />
+                  <label class="form__label" for="password2">
+                    Повторите пароль
+                  </label>
+                  <input
+                    class="form__input"
+                    type="password"
+                    name="password2"
+                    id="password2"
+                  />
                 </div>
 
                 <button class="form__button button" type="submit">

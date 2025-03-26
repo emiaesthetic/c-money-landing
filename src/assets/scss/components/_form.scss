@@ -60,6 +60,10 @@
     display: grid;
   }
 
+  &__field {
+    position: relative;
+  }
+
   &__label {
     display: block;
     margin-bottom: 2px;
@@ -104,4 +108,11 @@
       grid-area: unset;
     }
   }
+}
+
+.just-validate-error-message {
+  position: absolute;
+  top: -2px;
+  right: 2px;
+  font-size: var(--font-size-small);
 }
