@@ -1,6 +1,6 @@
 import 'virtual:svg-icons-register';
 
-import { initTabs } from '@/components/tabs';
+import initTabs from '@/components/tabs';
 
 import '@/assets/scss/main.scss';
 

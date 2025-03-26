@@ -1,6 +1,8 @@
 import JustValidate from 'just-validate';
 
-const validator = new JustValidate('.form', {
+import { SELECTORS } from './constants';
+
+export const validator = new JustValidate('.form', {
   errorFieldCssClass: 'is-invalid',
   errorLabelCssClass: 'just-validate-error-message',
 });
@@ -8,12 +10,12 @@ const validator = new JustValidate('.form', {
 const validateName = value => /^[a-zA-Zа-яА-Я]{2,}$/.test(value);
 
 const arePasswordsMatching = value => {
-  const password = document.querySelector('#password').value;
+  const password = document.querySelector(SELECTORS.PASSWORD).value;
   return password === value;
 };
 
 validator
-  .addField('#name', [
+  .addField(SELECTORS.NAME, [
     {
       rule: 'required',
       errorMessage: 'Введите имя',
@@ -24,7 +26,7 @@ validator
       errorMessage: 'Некорректное имя',
     },
   ])
-  .addField('#surname', [
+  .addField(SELECTORS.SURNAME, [
     {
       rule: 'required',
       errorMessage: 'Введите фамилию',
@@ -35,7 +37,7 @@ validator
       errorMessage: 'Некорректная фамилия',
     },
   ])
-  .addField('#patronymic', [
+  .addField(SELECTORS.PATRONYMIC, [
     {
       rule: 'required',
       errorMessage: 'Введите отчество',
@@ -46,7 +48,7 @@ validator
       errorMessage: 'Некорректное отчество',
     },
   ])
-  .addField('#phone', [
+  .addField(SELECTORS.PHONE, [
     {
       rule: 'required',
       errorMessage: 'Введите номер телефона',
@@ -54,12 +56,12 @@ validator
     {
       rule: 'custom',
       validator: value => {
-        return /^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d\- ]{7,10}$/.test(value);
+        return /(?:\+|\d)[\d\-()\s]{9,}\d/g.test(value);
       },
       errorMessage: 'Некорректный номер',
     },
   ])
-  .addField('#email', [
+  .addField(SELECTORS.EMAIL, [
     {
       rule: 'required',
       errorMessage: 'Введите e-mail',
@@ -69,7 +71,7 @@ validator
       errorMessage: 'Некорректный e-mail',
     },
   ])
-  .addField('#username', [
+  .addField(SELECTORS.USERNAME, [
     {
       rule: 'required',
       errorMessage: 'Введите логин',
@@ -80,7 +82,7 @@ validator
       errorMessage: 'Некорректный логин',
     },
   ])
-  .addField('#password', [
+  .addField(SELECTORS.PASSWORD, [
     {
       rule: 'required',
       errorMessage: 'Введите пароль',
@@ -90,7 +92,7 @@ validator
       errorMessage: 'Некорректный пароль',
     },
   ])
-  .addField('#password2', [
+  .addField(SELECTORS.PASSWORD2, [
     {
       rule: 'required',
       errorMessage: 'Введите пароль повторно',
@@ -101,39 +103,3 @@ validator
       errorMessage: 'Пароли не совпадают',
     },
   ]);
-
-const validateFirstTab = async () => {
-  const nameValid = await validator.revalidateField('#name');
-  const surnameValid = await validator.revalidateField('#surname');
-  const patronymicValid = await validator.revalidateField('#patronymic');
-
-  return nameValid && surnameValid && patronymicValid;
-};
-
-const validateSecondTab = async () => {
-  const phoneValid = await validator.revalidateField('#phone');
-  const emailValid = await validator.revalidateField('#email');
-
-  return phoneValid && emailValid;
-};
-
-const validateThirdTab = async () => {
-  const usernameValid = await validator.revalidateField('#username');
-  const passwordValid = await validator.revalidateField('#password');
-  const password2Valid = await validator.revalidateField('#password2');
-
-  return usernameValid && passwordValid && password2Valid;
-};
-
-export const validateTab = async () => {
-  switch (document.querySelector('.tabs__button--is-active').dataset.tabsPath) {
-    case '1':
-      return await validateFirstTab();
-    case '2':
-      return await validateSecondTab();
-    case '3':
-      return await validateThirdTab();
-    default:
-      return false;
-  }
-};
