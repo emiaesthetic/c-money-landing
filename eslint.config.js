@@ -12,6 +12,7 @@ export default [
         '**/node_modules/**',
         '**/dist/**',
         'eslint.config.js',
+        'vite.config.js',
       ],
     },
     {

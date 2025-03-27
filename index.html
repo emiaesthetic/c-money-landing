@@ -11,9 +11,36 @@
     <meta name="apple-mobile-web-app-title" content="MyWebSite" />
     <link rel="manifest" href="/site.webmanifest" />
 
+    <link
+      rel="preload"
+      href="src/assets/img/decor.svg"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Nunito-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Nunito-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Comfortaa-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <title>C-Money</title>
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -23,6 +50,8 @@
           <img
             class="logo__img"
             src="/src/assets/img/logo.svg"
+            width="139"
+            height="38"
             alt="Логотип C-Money"
           />
         </a>
@@ -272,6 +301,7 @@
                         width="140"
                         height="140"
                         alt="Фото автора комментария"
+                        loading="lazy"
                       />
                       <figcaption class="slider-card__author-name">
                         Юлия С
@@ -292,6 +322,7 @@
                         width="140"
                         height="140"
                         alt="Фото автора комментария"
+                        loading="lazy"
                       />
                       <figcaption class="slider-card__author-name">
                         Светлана Н
@@ -313,6 +344,7 @@
                         width="140"
                         height="140"
                         alt="Фото автора комментария"
+                        loading="lazy"
                       />
                       <figcaption class="slider-card__author-name">
                         Сергей А
@@ -333,6 +365,7 @@
                         width="140"
                         height="140"
                         alt="Фото автора комментария"
+                        loading="lazy"
                       />
                       <figcaption class="slider-card__author-name">
                         Emilyan A
@@ -377,6 +410,8 @@
             <img
               class="logo__img"
               src="/src/assets/img/footer-logo.svg"
+              width="141"
+              height="38"
               alt="Логотип C-Money"
             />
           </a>
@@ -484,6 +519,8 @@
             <img
               class="logo__img"
               src="/src/assets/img/logo.svg"
+              width="139"
+              height="38"
               alt="Логотип C-Money"
             />
           </a>

@@ -1,11 +1,13 @@
 import path from 'path';
 import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    ViteMinifyPlugin({}),
     ViteImageOptimizer({
       png: {
         quality: 60,
