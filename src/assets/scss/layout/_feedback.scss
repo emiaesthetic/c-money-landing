@@ -2,18 +2,18 @@
 @use '../abstracts/mixins' as mixins;
 
 .feedback {
-  padding-block: 90px 113px;
+  padding-block: 90px 116px;
 
   @include media.laptop {
     padding-block: 90px;
   }
 
   @include media.tablet {
-    padding-block: 80px;
+    padding-block: 80px 75px;
   }
 
   @include media.mobile {
-    padding-block: 62px 60px;
+    padding-block: 62px 70px;
   }
 
   &__container {
@@ -84,12 +84,13 @@
 
     @include media.laptop-less {
       --offset: -52px;
+
+      top: 30%;
     }
 
     @include media.mobile-lg {
       --offset: 0px;
 
-      top: 30%;
       width: 36px;
       height: 36px;
     }

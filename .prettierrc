@@ -10,5 +10,6 @@
   "arrowParens": "avoid",
   "endOfLine": "lf",
   "proseWrap": "preserve",
-  "embeddedLanguageFormatting": "auto"
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "ignore"
 }

@@ -20,6 +20,8 @@
 @use './components/tabs';
 @use './components/form';
 @use './components/slider-card';
+@use './components/contacts';
+@use './components/social';
 
 /* Layout */
 @use './layout/container';
@@ -29,6 +31,7 @@
 @use './layout/check-in';
 @use './layout/success-check-in';
 @use './layout/feedback';
+@use './layout/footer';
 
 /* Pages */
 

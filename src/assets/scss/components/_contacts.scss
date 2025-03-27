@@ -1,0 +1,23 @@
+@use '../abstracts/media' as media;
+
+.contacts {
+  font-weight: 700;
+
+  &__title {
+    margin-bottom: var(--margin-bottom);
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: var(--margin-bottom);
+  }
+
+  &__item:nth-last-child(2) {
+    @include media.mobile {
+      margin-bottom: 20px;
+    }
+  }
+}

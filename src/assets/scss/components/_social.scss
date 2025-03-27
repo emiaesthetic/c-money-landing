@@ -1,0 +1,27 @@
+@use '../abstracts/mixins' as mixins;
+
+.social {
+  &__list {
+    display: flex;
+    column-gap: 18px;
+  }
+
+  &__link {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--social-icon-background-primary);
+    color: var(--social-icon-color-primary);
+
+    @include mixins.flex-center(true);
+    @include mixins.transition(color);
+
+    @include mixins.hover {
+      color: var(--social-icon-color-hover);
+    }
+
+    @include mixins.focus {
+      color: var();
+    }
+  }
+}
