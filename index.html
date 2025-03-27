@@ -13,6 +13,7 @@
 
     <title>C-Money</title>
 
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -460,14 +461,10 @@
               </address>
             </div>
 
-            <div class="footer__map">
-              <iframe
-                class="footer__iframe"
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ebffbefa96031c6b7cbc9ba9156312041633fa72662a8b89910852177d4a08b&amp;source=constructor"
-                width="420"
-                height="200"
-                frameborder="0"
-              ></iframe>
+            <div class="footer__map" id="map">
+              <span class="visually-hidden">
+                Интерактивная карта с местоположением офиса компании
+              </span>
             </div>
           </div>
         </div>

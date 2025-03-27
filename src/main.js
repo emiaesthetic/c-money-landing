@@ -1,6 +1,7 @@
 import 'virtual:svg-icons-register';
 import 'swiper/css';
 
+import initMap from '@/components/map';
 import initTabs from '@/components/tabs';
 import Swiper from 'swiper';
 import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
@@ -9,6 +10,7 @@ import '@/assets/scss/main.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
+  initMap();
 
   new Swiper('.swiper', {
     modules: [Keyboard, Navigation, Mousewheel],
