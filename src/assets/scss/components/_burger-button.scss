@@ -8,10 +8,11 @@
   color: var(--foreground-secondary);
 
   @include mixins.flex-center(true);
-  @include mixins.transition(background-color);
+  @include mixins.transition(background-color, color);
 
   @include mixins.hover {
     background-color: var(--color-accent-1);
+    color: var(--foreground-primary);
   }
 
   @include mixins.focus-outline;
