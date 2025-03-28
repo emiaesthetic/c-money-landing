@@ -1,4 +1,5 @@
 @use '../abstracts/media' as media;
+@use '../abstracts/mixins' as mixins;
 
 .contacts {
   font-weight: 700;
@@ -19,5 +20,9 @@
     @include media.mobile {
       margin-bottom: 20px;
     }
+  }
+
+  &__link {
+    @include mixins.focus-outline;
   }
 }

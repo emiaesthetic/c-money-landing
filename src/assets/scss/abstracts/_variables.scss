@@ -45,6 +45,7 @@
   --font-size-btn: 18px;
   --font-size-small: 15px;
   --font-size-menu: 15px;
+  --font-size-input: 18px;
 
   /* Borders */
   --border-radius: 10px;
@@ -101,5 +102,6 @@
 
   @include media.mobile-lg {
     --font-size-tabs: 18px;
+    --font-size-input: 16px;
   }
 }

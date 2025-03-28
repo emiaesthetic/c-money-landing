@@ -1,4 +1,5 @@
 @use '../abstracts/_media.scss' as media;
+@use '../abstracts/mixins' as mixins;
 
 .footer {
   --margin-bottom: 16px;
@@ -84,6 +85,10 @@
 
   &__menu-item:not(:last-child) {
     margin-bottom: var(--margin-bottom);
+  }
+
+  &__menu-link {
+    @include mixins.focus-outline;
   }
 
   &__contacts {

@@ -20,8 +20,6 @@
       color: var(--social-icon-color-hover);
     }
 
-    @include mixins.focus {
-      color: var();
-    }
+    @include mixins.focus-outline;
   }
 }

@@ -84,6 +84,7 @@
     padding-inline: 20px;
     border: 2px solid var(--input-border-primary);
     border-radius: var(--border-radius);
+    font-size: var(--font-size-input);
 
     @include mixins.transition(border-color);
 
